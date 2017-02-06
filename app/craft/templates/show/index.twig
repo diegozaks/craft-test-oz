@@ -1,0 +1,17 @@
+{#
+ # Show entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block content %}
+  <article>
+
+    <h2>{{ entry.title }}</h2>
+    <p>{{ entry.companyName }}, {{ entry.countryOfOrigin }}</p>
+    {{ entry.body }}
+  </article>
+{% endblock %}
+test

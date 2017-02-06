@@ -1,0 +1,62 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+  <link rel="home" href="{{ siteUrl }}" />
+
+  {# Let's use uncompressed CSS if we're in dev mode, for easier debugging: #}
+  {% if craft.config.devMode %}
+  <link rel="stylesheet" href="/styles/main.css" />
+  {% else %}
+  <link rel="stylesheet" href="/styles/main.min.css" />
+  {% endif %}
+
+  {% block headScripts %}
+  <script src="/scripts/modernizr.js"></script>
+  {% endblock %}
+</head>
+
+<body>
+
+  <main role="main" class="container">
+  {% block content %}
+    <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+    <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+  {% endblock %}
+  </main>
+
+  {% block footerScripts %}
+    {# IE8 and below need jQuery 1 - other browsers use jQuery 3: -#}
+    {# (of course, if you don't need jQuery, just delete the next two lines...) -#}
+    <!--[if lt IE 9]><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><![endif]-->
+    <!--[if gte IE 9]><!--><script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script><!-- <![endif]-->
+    <script src="/scripts/bundle.js"></script>
+  {% endblock %}
+
+  {# Don't include analytics snippet in live preview: #}
+  {% if not craft.request.isLivePreview %}
+  {# Analytics script goes here... #}
+  {% endif %}
+
+  {# If we're on a .dev domain, load Browsersync: #}
+  {% if craft.request.serverName|slice(-4) == '.dev' %}
+  <script id="__bs_script__">
+    //<![CDATA[
+      document.write("<script async src='http://localhost:3000/browser-sync/browser-sync-client.js'><\/script>");
+    //]]>
+  </script>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+vagrant
+.vagrant
+.DS_Store
+node_modules/*
+.sass-cache
+app/craft/storage/runtime/*
+bower_components/*
+.docs
+.env
+app/public/assets/*

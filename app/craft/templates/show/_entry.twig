@@ -1,0 +1,44 @@
+{#
+ # Show entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block content %}
+	<h1>{{ entry.title }}</h1>
+		<article class="entry-content">
+		<p>{{ entry.companyName }}, {{ entry.countryOfOrigin }}</p>
+	</article>
+
+{# 
+	USE THIS FOR SHOWING A THUMBNAIL IN HOME PAGE OR SHOW LIST
+
+{% set asset = entry.showThumb.first() %}
+
+   <img src="/{{ asset.url }}" alt="">
+ #}
+{% for block in entry.showMarketing %}
+    {% if block.type == "promoVideo" %}
+
+        {{ block.video | videoEmbed }}
+
+    {% elseif block.type == "showImage" %}
+
+		{% set image = block.image.first() %}
+		{% if image %}
+			<img src="/{{ image.url }}" alt="">
+		{% endif %}
+		
+
+
+
+    {% endif %}
+
+
+{% endfor %}
+
+{% endblock %}
+
+
