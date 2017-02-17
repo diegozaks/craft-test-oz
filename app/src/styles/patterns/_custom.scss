@@ -1,7 +1,3 @@
-body {
-	@include outer-container;
-}
-
 header {
 	@include span-columns(12);
 	margin-bottom: 30px;
