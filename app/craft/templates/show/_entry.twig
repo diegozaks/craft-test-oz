@@ -6,11 +6,12 @@
 {% extends "_layout" %}
 {% set title = entry.title %}
 
+{% block head %}
+  {% include "_secondHeader.twig" %}
+{% endblock %}
+
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-		<article class="entry-content">
-		<p>{{ entry.companyName }}, {{ entry.countryOfOrigin }}</p>
-	</article>
+		
 
 {# 
 	USE THIS FOR SHOWING A THUMBNAIL IN HOME PAGE OR SHOW LIST
@@ -19,26 +20,54 @@
 
    <img src="/{{ asset.url }}" alt="">
  #}
-{% for block in entry.showMarketing %}
-    {% if block.type == "promoVideo" %}
+<header>
+	<h1>{{ entry.title }}</h1>
+	<h3>{{ entry.companyName }}, {{ entry.countryOfOrigin }}</h3>
+</header>
 
-        {{ block.video | videoEmbed }}
+<section id="content">
+	<div class="showInfo">
+		{% for block in entry.showMarketing %}
+		    {% if block.type == "promoVideo" %}
 
-    {% elseif block.type == "showImage" %}
+		        {{ block.video | videoEmbed }}
 
-		{% set image = block.image.first() %}
-		{% if image %}
-			<img src="/{{ image.url }}" alt="">
-		{% endif %}
-		
+		    {% elseif block.type == "showImage" %}
+
+				{% set image = block.image.first() %}
+				{% if image %}
+					<img src="/{{ image.url }}" alt="">
+				{% endif %}
+
+		    {% endif %}
+
+
+		{% endfor %}
+	</div>
+	<div class="tickets">
+		<ul>
+			{% for block in entry.performancetickets %}
+			    <li>
+			    {% if block.type == "performanceInfo" %}
+
+					{{ block.theaterName }} <br>
+					{{ block.ticketBuyingLink }} <br>
+					{{ block.dateTime }} <br>
+					{{ block.showCity }}
+
+			    {% endif %}
+			    </li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
 
 
 
-    {% endif %}
 
-
-{% endfor %}
 
 {% endblock %}
+
+
 
 

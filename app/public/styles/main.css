@@ -576,7 +576,7 @@ main {
   padding-bottom: 30px; }
 
 .container {
-  max-width: 65em;
+  max-width: 71.11111em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 30px;
@@ -690,3 +690,72 @@ input[type="submit"],
     .topnav li a {
       padding-left: 1em;
       padding-right: 1em; }
+
+body {
+  max-width: 71.11111em;
+  margin-left: auto;
+  margin-right: auto; }
+  body::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  header:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 48em) {
+    header {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%;
+      margin-left: 25.58941%; }
+      header:last-child {
+        margin-right: 0; } }
+
+#content {
+  max-width: 71.11111em;
+  margin-left: auto;
+  margin-right: auto; }
+  #content::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #content .tickets {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #content .tickets:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      #content .tickets {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        margin-left: -102.35765%; }
+        #content .tickets:last-child {
+          margin-right: 0; } }
+  #content .showInfo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #content .showInfo:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      #content .showInfo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        margin-left: 25.58941%; }
+        #content .showInfo:last-child {
+          margin-right: 0; } }
