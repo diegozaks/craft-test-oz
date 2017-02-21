@@ -15,6 +15,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300,400,700|Alef");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -692,32 +693,92 @@ input[type="submit"],
       padding-right: 1em; }
 
 body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+a:hover {
+  text-decoration: none; }
+
+#secondaryHeader {
+  padding-top: 15px;
+  height: 100px;
+  display: block;
   max-width: 71.11111em;
   margin-left: auto;
   margin-right: auto; }
-  body::after {
+  #secondaryHeader::after {
     clear: both;
     content: "";
     display: block; }
+  #secondaryHeader a {
+    color: #fff;
+    text-decoration: none; }
+  #secondaryHeader a:hover {
+    text-decoration: none;
+    font-weight: bolder; }
+  #secondaryHeader a:visited {
+    color: #fff; }
+  #secondaryHeader #nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    #secondaryHeader #nav:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      #secondaryHeader #nav {
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+    #secondaryHeader #nav ul {
+      list-style-type: none; }
+      #secondaryHeader #nav ul li {
+        display: inline-block; }
+        @media screen and (min-width: 48em) {
+          #secondaryHeader #nav ul li {
+            min-width: 100px;
+            padding: 0 15px; } }
 
-header {
+#showTitle {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  margin-bottom: 30px;
-  margin-top: 30px; }
-  header:last-child {
+  margin-bottom: 10px;
+  margin-top: 40px; }
+  #showTitle:last-child {
     margin-right: 0; }
   @media screen and (min-width: 48em) {
-    header {
+    #showTitle {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 74.41059%;
-      margin-left: 25.58941%; }
-      header:last-child {
+      width: 65.88078%;
+      margin-left: 34.11922%; }
+      #showTitle:last-child {
         margin-right: 0; } }
+  #showTitle h1 {
+    font-family: "Merriweather", serif;
+    font-size: 4em;
+    font-weight: 300; }
+    @media screen and (min-width: 48em) {
+      #showTitle h1 {
+        margin-top: 20px; } }
+  #showTitle h3 {
+    font-size: 0.8em;
+    letter-spacing: 0.4px;
+    font-weight: 300;
+    margin: 0; }
 
 #content {
   max-width: 71.11111em;
@@ -731,7 +792,8 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding-top: 40px; }
     #content .tickets:last-child {
       margin-right: 0; }
     @media screen and (min-width: 48em) {
@@ -739,10 +801,37 @@ header {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 23.23176%;
-        margin-left: -102.35765%; }
+        width: 31.76157%;
+        margin-left: -102.35765%;
+        padding-top: 0; }
         #content .tickets:last-child {
           margin-right: 0; } }
+    #content .tickets h2 {
+      /* Ticket Information: */
+      font-family: "Merriweather", serif;
+      font-size: 2em;
+      line-height: 30px;
+      font-weight: 300;
+      margin: 20px auto 0 10px; }
+    #content .tickets ul {
+      list-style-type: none;
+      padding: 0; }
+      #content .tickets ul li {
+        display: block; }
+        #content .tickets ul li a {
+          display: block;
+          padding: 20px 30px 20px 10px;
+          border-bottom: 1px #eee solid;
+          background: url("../assets/images/Ticket-Icon-Inactive.svg") no-repeat right 10px center; }
+          #content .tickets ul li a #theater {
+            font-weight: 700;
+            margin-bottom: 0; }
+          #content .tickets ul li a #showTime {
+            font-size: 0.8em;
+            margin-bottom: 0; }
+        #content .tickets ul li a:hover {
+          color: #000;
+          background: url("../assets/images/Ticket-Icon-Active.svg") #eee no-repeat right 10px center; }
   #content .showInfo {
     float: left;
     display: block;
@@ -755,7 +844,25 @@ header {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 74.41059%;
-        margin-left: 25.58941%; }
+        width: 65.88078%;
+        margin-left: 34.11922%; }
         #content .showInfo:last-child {
           margin-right: 0; } }
+    #content .showInfo iframe {
+      margin: 20px auto; }
+      @media screen and (min-width: 48em) {
+        #content .showInfo iframe {
+          min-height: 400px; } }
+    #content .showInfo p {
+      margin: 20px 0; }
+    #content .showInfo h2 {
+      font-family: "Merriweather", serif;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 300;
+      margin: 20px auto 0 auto; }
+    #content .showInfo #quoteSource {
+      text-align: center;
+      margin: 10px auto 20px auto; }
+    #content .showInfo img {
+      margin: 20px auto; }

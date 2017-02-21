@@ -18,10 +18,9 @@ return array(
   '*' => array(
     'devMode' => false,
     'omitScriptNameInUrls' => true,
-    'environmentVariables' => array(
-      // siteUrl is set automatically based on server name (see above):
-      // Use it to, eg. set assets location: {siteUrl}/assets
-      'siteUrl'  => SITE_URL
+    'siteUrl'  => array(
+      'en_us' => 'http://craft.dev/',
+      'he' => 'http://craft.dev/he/',
     ),
   ),
 
@@ -30,6 +29,11 @@ return array(
     'devMode' => true,
     // In dev mode we always want to see the latest changes to a template:
     'enableTemplateCaching' => false,
+
+    'siteUrl'  => array(
+      'en_us' => 'http://craft.dev/',
+      'he' => 'http://craft.dev/he/',
+    ),
   ),
 
 );

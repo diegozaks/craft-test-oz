@@ -1,0 +1,62 @@
+@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  direction: rtl;
+  text-align: right; }
+
+@media screen and (min-width: 48em) {
+  #showTitle {
+    margin-left: 0%; } }
+
+#content {
+  max-width: 71.11111em;
+  margin-left: auto;
+  margin-right: auto; }
+  #content::after {
+    clear: both;
+    content: "";
+    display: block; }
+  #content .tickets {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #content .tickets:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      #content .tickets {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 0%; }
+        #content .tickets:last-child {
+          margin-right: 0; } }
+    #content .tickets h2 {
+      margin: 20px 10px 0 auto; }
+    #content .tickets ul li a {
+      padding: 20px 10px 20px 30px;
+      background: url("../assets/images/Ticket-Icon-Inactive.svg") no-repeat left 10px center; }
+    #content .tickets ul li a:hover {
+      background: url("../assets/images/Ticket-Icon-Active.svg") #eee no-repeat left 10px center; }
+  #content .showInfo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #content .showInfo:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 48em) {
+      #content .showInfo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 0%; }
+        #content .showInfo:last-child {
+          margin-right: 0; } }

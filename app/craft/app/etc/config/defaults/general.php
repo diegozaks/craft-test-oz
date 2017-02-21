@@ -424,7 +424,7 @@ return array(
 	 * The maximum amount of memory Craft will try to reserve during memory intensive operations such as zipping,
 	 * unzipping and updating.
 	 */
-	'phpMaxMemoryLimit' => '256M',
+	'phpMaxMemoryLimit' => '512M',
 
 	/**
 	 * The name of the PHP session cookie.

@@ -1,9 +1,10 @@
 <?php
 
 // Path to your craft/ folder
-$craftPath = '../craft';
-// Tell Craft to serve the English content
-define('CRAFT_LOCALE', 'en_us');
+$craftPath = '../../craft';
+// Tell Craft to serve the Hebrew content
+define('CRAFT_LOCALE', 'he');
+
 
 // Do not edit below this line
 $path = rtrim($craftPath, '/').'/app/index.php';

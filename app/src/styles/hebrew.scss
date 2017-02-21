@@ -1,0 +1,68 @@
+// My variables
+$base-font-size: 16px;
+
+$sans: 'Open Sans', sans-serif;
+$serif: 'Merriweather', serif;
+
+$basic-margin: 20px;
+
+// LIBRARIES & HELPERS
+@import "bourbon";
+@import "neat";
+@import "neat-helpers";
+
+// // BASE STYLES
+@import "base/variables";
+@import "base/grid-settings";
+
+@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+
+body {
+	direction: rtl;
+	text-align: right;
+}
+
+#showTitle {
+	@include media($medium-screen) {
+     @include shift(0);
+  }
+}
+
+#content {
+	@include outer-container;
+
+	.tickets {
+		@include span-columns(12);
+
+		@include media($medium-screen) {
+	        @include span-columns(4);
+	        @include shift(0);
+	    }
+		h2{
+			margin: $basic-margin 10px 0 auto;
+		}
+	    ul {
+			li {
+				a{
+					padding: $basic-margin 10px $basic-margin 30px;
+					background: url('../assets/images/Ticket-Icon-Inactive.svg') no-repeat left 10px center;
+				}
+				a:hover {
+					background: url('../assets/images/Ticket-Icon-Active.svg') #eee no-repeat left 10px center;
+				}
+			}
+		}
+	}
+
+	.showInfo {
+		@include span-columns(12);
+ 
+	      @include media($medium-screen) {
+	         @include span-columns(8);
+	         @include shift(0);
+
+	      }
+	}
+
+}

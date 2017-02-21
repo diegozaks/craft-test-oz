@@ -37,6 +37,7 @@ var path = {
  */
 gulp.task('default', [
   'styles',
+  'hebrewStyles',
   'scripts',
   'images',
   'modernizr'
@@ -63,6 +64,11 @@ gulp.task('watch:tasks', ['default'], function(){
   // Styles:
   gulp.watch(path.src + '/styles/**/*.scss', [
     'styles'
+  ]);
+
+ // Styles:
+  gulp.watch(path.src + '/styles/**/*.scss', [
+    'hebrewStyles'
   ]);
 
   // Images:
@@ -155,6 +161,33 @@ gulp.task('styles', function(){
     .pipe(gulp.dest(path.dest + '/styles'))
     .pipe(plugins.browserSync.stream())
     .on('error', gutil.log);
+});
+
+gulp.task('hebrewStyles', function(){
+  gulp.src(path.src + '/styles/hebrew.scss')
+    // Compile Sass:
+    .pipe(plugins.sass.sync({
+        includePaths: [
+          path.npm + '/bourbon/app/assets/stylesheets',
+          path.npm + '/bourbon-neat/app/assets/stylesheets',
+          path.npm + '/node.normalize.scss'
+        ]
+      })
+      .on('error', plugins.sass.logError)
+    )
+    // Autoprefix:
+    .pipe(plugins.autoprefixer({
+      browsers: [
+        'last 3 versions',
+        'ie 8',
+        'ie 9'
+      ]
+    }))
+    // Write main.css
+    .pipe(gulp.dest(path.dest + '/styles'))
+    .pipe(plugins.browserSync.stream())
+    // Report file size:
+    .pipe(plugins.size({ showFiles: true }))
 });
 
 /**

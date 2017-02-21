@@ -1,12 +1,102 @@
-header {
+// My variables
+$base-font-size: 16px;
+
+$sans: 'Open Sans', sans-serif;
+$serif: 'Merriweather', serif;
+
+$basic-margin: 20px;
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300,400,700|Alef');
+body {
+	font-family: $sans;
+	font-weight: 300;
+	font-size: $base-font-size;
+	line-height: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#secondaryHeader {
+	padding-top: 15px;
+	height: 100px;
+	display: block;
+	@include outer-container;
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+	} 
+	a:hover {
+		text-decoration: none;
+		font-weight: bolder;
+	}
+	a:visited {
+		color: #fff;
+	}
+
+	#nav {
+		@include span-columns(12);
+		padding: 15px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media($medium-screen) {
+			justify-content: space-between;
+		}
+		
+		#logo {
+		}
+
+		ul {
+			list-style-type: none;
+			// display: flex;
+
+			li {
+				display: inline-block;
+				@include media($medium-screen) {
+					min-width: 100px;
+					padding: 0 15px;
+
+				}
+			}
+		}
+	}
+
+}
+
+
+#showTitle {
 	@include span-columns(12);
-	margin-bottom: 30px;
-	margin-top: 30px;
+	margin-bottom: $basic-margin/2;
+	margin-top: $basic-margin*2;
 
 	@include media($medium-screen) {
-     @include span-columns(9);
-     @include shift(3);
-  }
+	    @include span-columns(8);
+	    @include shift(4);
+	}
+
+	h1 {
+		font-family: $serif;
+		font-size: 4em;
+		font-weight: 300;
+		@include media($medium-screen) {
+			margin-top: $basic-margin;
+		}
+	}
+	h3 {
+		font-size: 0.8em;
+		letter-spacing: 0.4px;
+		font-weight: 300;
+		margin: 0;
+	}
+
 }
 
 #content {
@@ -14,21 +104,81 @@ header {
 
 	.tickets {
 		@include span-columns(12);
+		padding-top: 40px;
 
 		@include media($medium-screen) {
-	         @include span-columns(3);
+	         @include span-columns(4);
 	         @include shift(-12);
-	      }
+	         padding-top: 0;
+	    }
+		
+		h2{
+			/* Ticket Information: */
+			font-family: $serif;
+			font-size: 2em;
+			line-height: 30px;
+			font-weight: 300;
+			margin: $basic-margin auto 0 10px;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			li {
+				display: block;
+				a{
+					display: block;
+					padding: $basic-margin 30px $basic-margin 10px;
+					border-bottom: 1px #eee solid;
+					background: url('../assets/images/Ticket-Icon-Inactive.svg') no-repeat right 10px center;
+					
+					#theater {
+						font-weight: 700;
+						margin-bottom: 0;
+					}
+					#showTime {
+						font-size: 0.8em;
+						margin-bottom: 0;
+					}
+
+				}
+				a:hover {
+					color: #000;
+					background: url('../assets/images/Ticket-Icon-Active.svg') #eee no-repeat right 10px center;
+				}
+			}
+		}
 	}
 
 	.showInfo {
 		@include span-columns(12);
- 
-	      @include media($medium-screen) {
-	         @include span-columns(9);
-	         @include shift(3);
+	    @include media($medium-screen) {
+	        @include span-columns(8);
+	        @include shift(4);
 
-	      }
+	    }
+		iframe {
+			margin: $basic-margin auto;
+			 @include media($medium-screen) {
+				min-height: 400px;
+	    	}
+		}
+	    p {
+			margin: $basic-margin 0;
+		}
+		h2 {
+			font-family: $serif;
+			text-align: center;
+			font-size: 2em;
+			font-weight: 300;
+			margin: $basic-margin auto 0 auto;
+		}
+		#quoteSource {
+			text-align: center;
+			margin: $basic-margin/2 auto $basic-margin auto;
+		}
+		img {
+			margin: $basic-margin auto;
+		}
 	}
 
 }
