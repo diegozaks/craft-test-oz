@@ -40,6 +40,28 @@ h3 {
 }
 
 
+// HOMEPAGE
+
+#showList {
+	
+	.show {
+
+		.left {
+			
+			@include media($medium-screen) {
+				@include span-columns(4);
+				 float:right;
+			}
+
+		}
+		.right {
+
+			@include media($medium-screen) {
+				@include span-columns(8);
+			}
+		}
+	}
+}
 
 //  SHOWS
 

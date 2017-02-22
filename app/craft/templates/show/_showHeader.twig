@@ -1,5 +1,5 @@
 {#
- # Index page header
+ # Secondary header
  # -------------------
  #}
 
@@ -8,7 +8,13 @@
 	{% includeCssFile '/styles/hebrew.css' %}
 {% endif %}
 
+
+{% set image = entry.showHomepageFeaturedImage.first() %}
+{% if image %}
+<div id="secondaryHeader" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+{% else %}
 <div id="secondaryHeader">
+{% endif %}
 	
 	<div id="nav">
 		
@@ -16,6 +22,11 @@
 		    <a href="" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
 		{% endfor %}
 
-		 {% include "_nav.twig" %}
+
+		{% include "_nav.twig" %}
 	</div>
+	
+	
+
 </div>
+

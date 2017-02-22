@@ -30,6 +30,25 @@ h3 {
   font-weight: 300; }
 
 @media screen and (min-width: 37.5em) {
+  #showList .show .left {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    float: right; }
+    #showList .show .left:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 37.5em) {
+  #showList .show .right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    #showList .show .right:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 37.5em) {
   #showTitle {
     margin-left: 0%; } }
 

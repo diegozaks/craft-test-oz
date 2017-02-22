@@ -8,10 +8,12 @@ body {
 	font-weight: 300;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
+	color: #AAA;
 }
 
 a {
 	text-decoration: none;
+	font-weight: bolder;
 	color: #000;
 }
 
@@ -19,13 +21,87 @@ a:hover {
 	text-decoration: none;
 }
 
+
+// HOMEPAGE
+#featuredBG {
+	@include outer-container;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-items: space-between;
+
+	a { 
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		h1, h3 {
+			color: #fff;
+		}
+
+		#dateRange {
+			margin-top: $basic-margin;
+			color: #ccc;
+		}
+	}
+
+}
+
+#showList {
+	margin: $basic-margin*3 0;
+	h2 {
+		margin-bottom: $basic-margin;
+		margin-right: $basic-margin;
+	}
+
+	.show {
+		@include span-columns(12);
+		
+		margin: $basic-margin 0;
+
+		.left {
+			
+			h2 {
+				margin-bottom: 0;
+				margin-right: 0;
+			}
+
+			@include media($medium-screen) {
+				@include span-columns(4);
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				li {
+					margin: 0;
+				}
+			}
+		}
+		.right {
+			margin-top: $basic-margin;
+			@include media($medium-screen) {
+				@include span-columns(8);
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+
+
 // SECONDARY HEADER
 
 #secondaryHeader {
-	padding-top: 15px;
-	height: 100px;
-	display: block;
 	@include outer-container;
+	background: #000;
+
+	#logo {
+		img {
+			height: 50px;
+		}
+	}
 	
 	a {
 		color: #fff;
@@ -39,20 +115,22 @@ a:hover {
 
 	#nav {
 		@include span-columns(12);
-		padding: 15px;
 		display: flex;
-		flex-wrap: wrap;
 
 		@include media($medium-screen) {
 			justify-content: space-between;
+			align-items: center;
 		}
 		
 		#logo {
+			padding: 30px 30px;
+			@include media($medium-screen) {
+				padding: 30px 40px;
+			}
 		}
 
 		ul {
 			list-style-type: none;
-			// display: flex;
 
 			li {
 				display: inline-block;

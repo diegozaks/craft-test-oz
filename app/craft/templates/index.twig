@@ -19,22 +19,77 @@
 
 {% extends "_layout" %}
 
+{% block featuredShow %}
+{% for entry in craft.entries.section('shows').showFeaturedOnHomepage(1).limit(1) %}
+	{% set image = entry.showHomepageFeaturedImage.first() %}
+	{% if image %}
+		<div id="featuredBG" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+	{% else %}
+		<div id="featuredBG">
+	{% endif %}
+	        <a href="{{ entry.url }}">
+	        	<h1>{{ entry.title }}</h1>
+	        	<h3>{{ entry.showCompanyName }}
+	        	{% if craft.locale == 'he' %}
+					<span id="dateRange"> | {{ entry.showDateStart | date('j/m ')  }} - {{ entry.showDateEnd | date('j/m')  }}</span>
+				{% else %}
+					<span id="dateRange"> | {{ entry.showDateStart | date('M j')  }} - {{ entry.showDateEnd | date('M j')  }}</span>
+				{% endif %}
+				</h3>
+	        </a>
+
+		</div>
+
+{% endfor %}
+{% endblock %}
+
 {% block content %}
 
-    {% for entry in craft.entries.section('facts').limit(1).order('RAND()') %}
+<section id="showList">
+	<h2>
+		{{ "Upcoming Shows" | translate }}
+	</h2>
+	{% for entry in craft.entries.section('shows') if entry.showDateEnd > now %}
 
-	<a href="">
-		<div class="maincontainer">
-			<div class="right">
-				<div class="wrap">{{ entry.truth }}</div> 
-			</div>
-			<div class="left">
-				<div class="wrap">{{ entry.altFact }}</div>
-			</div>
+	<article class="show">
+		<div class="left">
+			<a href="{{ entry.url }}">
+				<h2>{{ entry.title }}</h2>
+			</a>
+			<h3>{{ entry.showCompanyName }}
+        	{% if craft.locale == 'he' %}
+				<span id="dateRange"> | {{ entry.showDateStart | date('j/m ')  }} - {{ entry.showDateEnd | date('j/m')  }}</span>
+			{% else %}
+				<span id="dateRange"> | {{ entry.showDateStart | date('M j')  }} - {{ entry.showDateEnd | date('M j')  }}</span>
+			{% endif %}
+			</h3>
+			{# <ul>
+				{% for block in entry.showTicketInformation %}
+					<li>
+					    {% if block.type == "ticketInformation" %}
+								<h3 id="theater">{{ block.theaterName }}</h3>
+					    {% endif %}
+					</li>
+				{% endfor %}
+			</ul> #}
 		</div>
-	</a>
-      
-      
-    {% endfor %}
+
+		<div class="right">
+			{% set image = entry.showThumbnail.first() %}
+			{% if image %}
+				<img src="/{{ image.url }}" alt="">
+			{% endif %}
+		
+			<p>{{ entry.showSummary }}</p>
+			<a href="{{ entry.url }}">Learn More</a>
+		</div>
+		
+    </article>
+
+	{% endfor %}
+</section>
+
+
+
 
 {% endblock %}

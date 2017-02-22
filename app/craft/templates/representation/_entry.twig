@@ -1,0 +1,45 @@
+{#
+ # Show representation template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block head %}
+  {% include "_secondHeader.twig" %}
+{% endblock %}
+
+{% block content %}
+
+<section id="representation">
+	<h2>
+		{{ "Upcoming" | translate }}
+	</h2>
+	{% for entry in craft.entries.section('representation') %}
+
+	<article class="show">
+		<div class="left">
+				<h2>{{ entry.title }}</h2>
+			<h3>{{ entry.representationCompanyLocation }}</h3>
+		</div>
+
+		<div class="right">
+			{% set image = entry.representationCompanyThumbnail.first() %}
+			{% if image %}
+				<img src="/{{ image.url }}" alt="">
+			{% endif %}
+			<p>{{ entry.representationCompanyText }}</p>
+			<a href="{{ entry.representationCompanyText }}">Website</a>
+		</div>
+		
+    </article>
+
+	{% endfor %}
+</section>
+
+{% endblock %}
+
+
+
+
