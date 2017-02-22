@@ -1,14 +1,34 @@
 // Font Families
 ///////////////////////////////////////////////////////////////////////////////
 
-$base-font-family:   sans-serif;
-$header-font-family: $base-font-family;
+$base-font-family: 'Open Sans', sans-serif;
+$serif-font-family: 'Merriweather', serif;
+$header-font-family: $serif-font-family;
+
+$hebrew-sans-font-family: 'Open Sans Hebrew', sans-serif;
+$hebrew-serif-font-family: 'Alef', sans-serif;
+$header-header-font-family: $hebrew-serif-font-family;
 
 // Default Sizes
-$base-font-size-px:  18;
+
+$line-height-multiplier: 1.5;
+
+$base-font-size-px:  16;
 $base-font-size:     em($base-font-size-px);
-$base-line-height:   $base-font-size * 1.4;
+$base-line-height:   $base-font-size * $line-height-multiplier;
 $base-border-radius: em(3);
+
+$small-font-size-px:  12;
+$small-font-size:     em($small-font-size-px);
+$small-line-height:   $small-font-size * $line-height-multiplier;
+
+$large-font-size-px:  36;
+$large-font-size:     em($large-font-size-px);
+$large-line-height:   $large-font-size * $line-height-multiplier;
+
+$huge-font-size-px:  64;
+$huge-font-size:     em($huge-font-size-px);
+$huge-line-height:   $huge-font-size * $line-height-multiplier;
 
 //// Colors
 
@@ -25,3 +45,7 @@ $link-hover-color: lighten($link-color, 15);
 $border-color: lighten($body-color, 50);
 $border-color-hover: $body-color;
 $border-color-focus: $link-color;
+
+
+// My variables
+$basic-margin: 20px;

@@ -1,4 +1,5 @@
-@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url("https://fonts.googleapis.com/earlyaccess/opensanshebrew.css");
+@import url("https://fonts.googleapis.com/css?family=Alef");
 html {
   box-sizing: border-box; }
 
@@ -6,10 +7,29 @@ html {
   box-sizing: inherit; }
 
 body {
+  color: #333333;
+  font-family: "Open Sans Hebrew", sans-serif;
+  font-size: 1em;
   direction: rtl;
   text-align: right; }
 
-@media screen and (min-width: 48em) {
+h1 {
+  font-size: 4em;
+  font-family: "Alef", sans-serif;
+  font-weight: 300; }
+
+h2 {
+  font-size: 2.25em;
+  font-family: "Alef", sans-serif;
+  font-weight: 300; }
+
+h3 {
+  font-size: 0.75em;
+  font-family: "Open Sans Hebrew", sans-serif;
+  letter-spacing: 0.4px;
+  font-weight: 300; }
+
+@media screen and (min-width: 37.5em) {
   #showTitle {
     margin-left: 0%; } }
 
@@ -28,7 +48,7 @@ body {
     width: 100%; }
     #content .tickets:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 37.5em) {
       #content .tickets {
         float: left;
         display: block;
@@ -51,7 +71,7 @@ body {
     width: 100%; }
     #content .showInfo:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 37.5em) {
       #content .showInfo {
         float: left;
         display: block;

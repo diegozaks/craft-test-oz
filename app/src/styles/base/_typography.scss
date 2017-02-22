@@ -13,15 +13,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: em(48, $base-font-size-px); // 48px
+  font-size: $huge-font-size; // 64px
+  font-family: $serif-font-family;
+  font-weight: 300;
 }
 
 h2 {
-  font-size: em(36, $base-font-size-px); // 36px
+  font-size: $large-font-size; // 36px
+  font-family: $serif-font-family;
+  font-weight: 300;
 }
 
 h3 {
-  font-size: em(32, $base-font-size-px); // 32px
+  font-size: $small-font-size; // 12px
+    letter-spacing: 0.4px;
+    font-weight: 300;
 }
 
 h4 {

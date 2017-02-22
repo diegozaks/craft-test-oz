@@ -377,36 +377,42 @@ html {
 
 body {
   color: #333333;
-  font-family: sans-serif;
-  font-size: 1.125em;
-  line-height: 1.575em; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   color: #333333;
   line-height: 1.25;
   margin: 0; }
 
 h1 {
-  font-size: 2.66667em; }
+  font-size: 4em;
+  font-family: "Merriweather", serif;
+  font-weight: 300; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 2.25em;
+  font-family: "Merriweather", serif;
+  font-weight: 300; }
 
 h3 {
-  font-size: 1.77778em; }
+  font-size: 0.75em;
+  letter-spacing: 0.4px;
+  font-weight: 300; }
 
 h4 {
-  font-size: 1.33333em; }
+  font-size: 1.5em; }
 
 h5 {
-  font-size: 1.11111em; }
+  font-size: 1.25em; }
 
 h6 {
-  font-size: 1.125em; }
+  font-size: 1em; }
 
 p {
-  margin: 0 0 0.7875em; }
+  margin: 0 0 0.75em; }
 
 a {
   color: #3a3ccc;
@@ -420,7 +426,7 @@ a {
 hr {
   border: none;
   border-bottom: 1px solid #b3b3b3;
-  margin: 1.575em 0; }
+  margin: 1.5em 0; }
 
 img {
   margin: 0;
@@ -433,10 +439,10 @@ acronym {
 
 address {
   display: block;
-  margin: 0 0 0.7875em; }
+  margin: 0 0 0.75em; }
 
 hgroup {
-  margin-bottom: 0.7875em; }
+  margin-bottom: 0.75em; }
 
 del {
   color: #595959; }
@@ -444,8 +450,8 @@ del {
 blockquote {
   border-left: 2px solid #b3b3b3;
   color: #595959;
-  margin: 1.575em 0;
-  padding-left: 0.7875em; }
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
 
 cite {
   color: #737373;
@@ -455,19 +461,19 @@ cite {
 
 fieldset {
   border: 1px solid #b3b3b3;
-  margin: 0 0 0.7875em 0;
-  padding: 1.575em; }
+  margin: 0 0 0.75em 0;
+  padding: 1.5em; }
 
 input,
 select {
   display: block;
-  font-family: sans-serif;
-  font-size: 1.125em; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em; }
 
 label {
   cursor: pointer;
   font-weight: bold;
-  margin-bottom: 0.39375em; }
+  margin-bottom: 0.375em; }
   label.required:after {
     content: " *"; }
 
@@ -479,8 +485,8 @@ select[multiple=multiple] {
   background-color: white;
   border-radius: 0.1875em;
   border: 1px solid #b3b3b3;
-  margin-bottom: 0.7875em;
-  padding: 0.525em 0.525em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
   width: 100%; }
   textarea:hover,
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
@@ -505,16 +511,16 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: 0.39375em;
+  margin-right: 0.375em;
   width: auto; }
 
 input[type="file"] {
-  margin-bottom: 0.7875em;
-  padding-bottom: 0.525em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
   width: 100%; }
 
 select {
-  margin-bottom: 1.575em;
+  margin-bottom: 1.5em;
   max-width: 100%;
   width: auto; }
 
@@ -538,33 +544,33 @@ ul.unstyled, ol.unstyled, nav ul, .pagination ul {
   list-style-type: none; }
 
 ul, ol {
-  margin-bottom: 0.7875em;
-  padding-left: 1.575em; }
+  margin-bottom: 0.75em;
+  padding-left: 1.5em; }
 
 dl {
-  line-height: 1.575em;
-  margin-bottom: 0.7875em; }
+  line-height: 1.5em;
+  margin-bottom: 0.75em; }
   dl dt {
     font-weight: bold;
-    margin-top: 0.7875em; }
+    margin-top: 0.75em; }
   dl dd {
     margin: 0; }
 
 table {
   border-collapse: collapse;
-  margin: 0.7875em 0;
+  margin: 0.75em 0;
   table-layout: fixed;
   width: 100%; }
 
 th {
   border-bottom: 1px solid #8c8c8c;
   font-weight: bold;
-  padding: 0.7875em 0;
+  padding: 0.75em 0;
   text-align: left; }
 
 td {
   border-bottom: 1px solid #b3b3b3;
-  padding: 0.7875em 0; }
+  padding: 0.75em 0; }
 
 tr, td, th {
   vertical-align: middle; }
@@ -599,7 +605,7 @@ input[type="submit"],
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: bold;
   line-height: 1;
   padding: .75em 1em;
@@ -695,8 +701,8 @@ input[type="submit"],
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 25px; }
+  font-size: 1em;
+  line-height: 1.5em; }
 
 a {
   text-decoration: none;
@@ -717,10 +723,8 @@ a:hover {
     content: "";
     display: block; }
   #secondaryHeader a {
-    color: #fff;
-    text-decoration: none; }
+    color: #fff; }
   #secondaryHeader a:hover {
-    text-decoration: none;
     font-weight: bolder; }
   #secondaryHeader a:visited {
     color: #fff; }
@@ -736,7 +740,7 @@ a:hover {
         flex-wrap: wrap; }
     #secondaryHeader #nav:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 37.5em) {
       #secondaryHeader #nav {
         -ms-flex-pack: justify;
             justify-content: space-between; } }
@@ -744,7 +748,7 @@ a:hover {
       list-style-type: none; }
       #secondaryHeader #nav ul li {
         display: inline-block; }
-        @media screen and (min-width: 48em) {
+        @media screen and (min-width: 37.5em) {
           #secondaryHeader #nav ul li {
             min-width: 100px;
             padding: 0 15px; } }
@@ -758,7 +762,7 @@ a:hover {
   margin-top: 40px; }
   #showTitle:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 48em) {
+  @media screen and (min-width: 37.5em) {
     #showTitle {
       float: left;
       display: block;
@@ -767,17 +771,10 @@ a:hover {
       margin-left: 34.11922%; }
       #showTitle:last-child {
         margin-right: 0; } }
-  #showTitle h1 {
-    font-family: "Merriweather", serif;
-    font-size: 4em;
-    font-weight: 300; }
-    @media screen and (min-width: 48em) {
-      #showTitle h1 {
-        margin-top: 20px; } }
+  @media screen and (min-width: 37.5em) {
+    #showTitle h1 {
+      margin-top: 20px; } }
   #showTitle h3 {
-    font-size: 0.8em;
-    letter-spacing: 0.4px;
-    font-weight: 300;
     margin: 0; }
 
 #content {
@@ -796,7 +793,7 @@ a:hover {
     padding-top: 40px; }
     #content .tickets:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 37.5em) {
       #content .tickets {
         float: left;
         display: block;
@@ -807,11 +804,6 @@ a:hover {
         #content .tickets:last-child {
           margin-right: 0; } }
     #content .tickets h2 {
-      /* Ticket Information: */
-      font-family: "Merriweather", serif;
-      font-size: 2em;
-      line-height: 30px;
-      font-weight: 300;
       margin: 20px auto 0 10px; }
     #content .tickets ul {
       list-style-type: none;
@@ -839,7 +831,7 @@ a:hover {
     width: 100%; }
     #content .showInfo:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 37.5em) {
       #content .showInfo {
         float: left;
         display: block;
@@ -850,16 +842,13 @@ a:hover {
           margin-right: 0; } }
     #content .showInfo iframe {
       margin: 20px auto; }
-      @media screen and (min-width: 48em) {
+      @media screen and (min-width: 37.5em) {
         #content .showInfo iframe {
           min-height: 400px; } }
     #content .showInfo p {
       margin: 20px 0; }
     #content .showInfo h2 {
-      font-family: "Merriweather", serif;
       text-align: center;
-      font-size: 2em;
-      font-weight: 300;
       margin: 20px auto 0 auto; }
     #content .showInfo #quoteSource {
       text-align: center;

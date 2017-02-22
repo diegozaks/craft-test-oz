@@ -1,17 +1,13 @@
 // My variables
-$base-font-size: 16px;
+// $base-font-size: 16px;
 
-$sans: 'Open Sans', sans-serif;
-$serif: 'Merriweather', serif;
-
-$basic-margin: 20px;
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300,400,700|Alef');
 body {
-	font-family: $sans;
+	font-family: $base-font-family;
 	font-weight: 300;
 	font-size: $base-font-size;
-	line-height: 25px;
+	line-height: $base-line-height;
 }
 
 a {
@@ -23,6 +19,8 @@ a:hover {
 	text-decoration: none;
 }
 
+// SECONDARY HEADER
+
 #secondaryHeader {
 	padding-top: 15px;
 	height: 100px;
@@ -31,10 +29,8 @@ a:hover {
 	
 	a {
 		color: #fff;
-		text-decoration: none;
 	} 
 	a:hover {
-		text-decoration: none;
 		font-weight: bolder;
 	}
 	a:visited {
@@ -72,6 +68,8 @@ a:hover {
 }
 
 
+//  SHOW PAGE
+
 #showTitle {
 	@include span-columns(12);
 	margin-bottom: $basic-margin/2;
@@ -83,17 +81,11 @@ a:hover {
 	}
 
 	h1 {
-		font-family: $serif;
-		font-size: 4em;
-		font-weight: 300;
 		@include media($medium-screen) {
 			margin-top: $basic-margin;
 		}
 	}
 	h3 {
-		font-size: 0.8em;
-		letter-spacing: 0.4px;
-		font-weight: 300;
 		margin: 0;
 	}
 
@@ -112,12 +104,7 @@ a:hover {
 	         padding-top: 0;
 	    }
 		
-		h2{
-			/* Ticket Information: */
-			font-family: $serif;
-			font-size: 2em;
-			line-height: 30px;
-			font-weight: 300;
+		h2 {
 			margin: $basic-margin auto 0 10px;
 		}
 		ul {
@@ -166,10 +153,7 @@ a:hover {
 			margin: $basic-margin 0;
 		}
 		h2 {
-			font-family: $serif;
 			text-align: center;
-			font-size: 2em;
-			font-weight: 300;
 			margin: $basic-margin auto 0 auto;
 		}
 		#quoteSource {
