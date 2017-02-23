@@ -47,15 +47,19 @@ h3 {
 	.show {
 
 		.left {
-			
 			@include media($medium-screen) {
 				@include span-columns(4);
 				 float:right;
+				 margin-right: 0;
+			}
+
+			.ticketButton {
+				width: 150px;
 			}
 
 		}
 		.right {
-
+			
 			@include media($medium-screen) {
 				@include span-columns(8);
 			}
@@ -80,6 +84,7 @@ h3 {
 		@include media($medium-screen) {
 	        @include span-columns(4);
 	        @include shift(0);
+	        margin-right: 0;
 	    }
 		h2{
 			margin: $basic-margin 10px 0 auto;

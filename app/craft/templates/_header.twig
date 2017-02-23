@@ -8,14 +8,25 @@
 	{% includeCssFile '/styles/hebrew.css' %}
 {% endif %}
 
-<div id="secondaryHeader">
+<header>
 	
 	<div id="nav">
 		
 		{% for image in craft.assets.title('Oz Logo') %}
-		    <a href="" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+		    <a href="/" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+		{% endfor %}
+		
+		{% for entry in craft.entries.section('navigation') %}
+			<ul> 
+				{% for block in entry.navigationLink %}
+					<li>
+					{% if block.type == "navLink" %}
+				         <a href="{{ block.linkUrl }}">{{ block.linkTitle }}</a>
+				    {% endif %}
+				    </li> 
+				{% endfor %}
+			</ul>
 		{% endfor %}
 
-		 {% include "_nav.twig" %}
 	</div>
-</div>
+</header>

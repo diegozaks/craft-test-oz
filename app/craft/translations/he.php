@@ -5,6 +5,8 @@ return array(
     "Upcoming Shows" => "הופעות קרובות",
     "Performances" => "הופעות",
     "Representation" => "יִצוּג",
+    "Find Tickets" => "כרטיסים",
+    "Website" => "אתר החברה",
 );
 
 ?>

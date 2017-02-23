@@ -24,12 +24,18 @@
 		</div>
 
 		<div class="right">
+
 			{% set image = entry.representationCompanyThumbnail.first() %}
 			{% if image %}
-				<img src="/{{ image.url }}" alt="">
+			<div class="showThumb" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+			{% else %}
+			<div class="showThumb">
 			{% endif %}
+			</div>
 			<p>{{ entry.representationCompanyText }}</p>
-			<a href="{{ entry.representationCompanyText }}">Website</a>
+			<a href="{{ entry.representationCompanyLink }}" class="ticketButton">
+				{{ "Website" | translate }}
+			</a>
 		</div>
 		
     </article>

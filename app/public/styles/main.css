@@ -714,6 +714,81 @@ a {
 a:hover {
   text-decoration: none; }
 
+.ticketButton {
+  display: inline-block;
+  padding: 15px;
+  margin: 40px 0 0 0;
+  width: 180px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  text-align: center;
+  letter-spacing: 3.1px;
+  transition: color 0.1s linear;
+  transition: background 0.3s linear; }
+  .ticketButton:hover {
+    text-decoration: none;
+    background: #bbb; }
+  .ticketButton:active, .ticketButton:focus {
+    color: #7778dc; }
+
+header {
+  max-width: 71.11111em;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000; }
+  header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  header #logo img {
+    height: 50px; }
+  header a {
+    color: #fff; }
+    header a:hover {
+      font-weight: bolder; }
+    header a:visited {
+      color: #fff; }
+  header #nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex; }
+    header #nav:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 37.5em) {
+      header #nav {
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-align: center;
+            align-items: center; } }
+    header #nav #logo {
+      padding: 30px 30px; }
+      @media screen and (min-width: 37.5em) {
+        header #nav #logo {
+          padding: 30px 40px; } }
+    header #nav ul {
+      list-style-type: none;
+      margin: 0 20px; }
+      header #nav ul li {
+        display: inline-block;
+        text-align: center; }
+        header #nav ul li a {
+          display: inline-block;
+          font-size: 0.75em;
+          text-transform: uppercase;
+          transition: font-weight 0.1s linear;
+          text-align: center; }
+          header #nav ul li a:hover {
+            font-weight: 700;
+            color: #fff; }
+        @media screen and (min-width: 37.5em) {
+          header #nav ul li {
+            padding: 0 15px; } }
+
 #featuredBG {
   max-width: 71.11111em;
   margin-left: auto;
@@ -732,6 +807,7 @@ a:hover {
   #featuredBG a {
     margin-left: auto;
     margin-right: auto;
+    margin-top: -20px;
     text-align: center; }
     #featuredBG a h1, #featuredBG a h3 {
       color: #fff; }
@@ -742,8 +818,7 @@ a:hover {
 #showList {
   margin: 60px 0; }
   #showList h2 {
-    margin-bottom: 20px;
-    margin-right: 20px; }
+    margin-bottom: 20px; }
   #showList .show {
     float: left;
     display: block;
@@ -754,7 +829,12 @@ a:hover {
       margin-right: 0; }
     #showList .show .left h2 {
       margin-bottom: 0;
-      margin-right: 0; }
+      margin-right: 0;
+      font-size: 30px; }
+    #showList .show .left .locale {
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 5px; }
     @media screen and (min-width: 37.5em) {
       #showList .show .left {
         float: left;
@@ -770,6 +850,11 @@ a:hover {
         margin: 0; }
     #showList .show .right {
       margin-top: 20px; }
+      #showList .show .right .showThumb {
+        min-height: 320px;
+        margin: 20px 0; }
+      #showList .show .right .ticketButton {
+        margin-top: 20px; }
       @media screen and (min-width: 37.5em) {
         #showList .show .right {
           float: left;
@@ -779,52 +864,6 @@ a:hover {
           margin-top: 0; }
           #showList .show .right:last-child {
             margin-right: 0; } }
-
-#secondaryHeader {
-  max-width: 71.11111em;
-  margin-left: auto;
-  margin-right: auto;
-  background: #000; }
-  #secondaryHeader::after {
-    clear: both;
-    content: "";
-    display: block; }
-  #secondaryHeader #logo img {
-    height: 50px; }
-  #secondaryHeader a {
-    color: #fff; }
-  #secondaryHeader a:hover {
-    font-weight: bolder; }
-  #secondaryHeader a:visited {
-    color: #fff; }
-  #secondaryHeader #nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    display: -ms-flexbox;
-    display: flex; }
-    #secondaryHeader #nav:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 37.5em) {
-      #secondaryHeader #nav {
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-align: center;
-            align-items: center; } }
-    #secondaryHeader #nav #logo {
-      padding: 30px 30px; }
-      @media screen and (min-width: 37.5em) {
-        #secondaryHeader #nav #logo {
-          padding: 30px 40px; } }
-    #secondaryHeader #nav ul {
-      list-style-type: none; }
-      #secondaryHeader #nav ul li {
-        display: inline-block; }
-        @media screen and (min-width: 37.5em) {
-          #secondaryHeader #nav ul li {
-            min-width: 100px;
-            padding: 0 15px; } }
 
 #showTitle {
   float: left;
@@ -914,12 +953,12 @@ a:hover {
         #content .showInfo:last-child {
           margin-right: 0; } }
     #content .showInfo iframe {
-      margin: 20px auto; }
+      margin: 10px auto; }
       @media screen and (min-width: 37.5em) {
         #content .showInfo iframe {
           min-height: 400px; } }
     #content .showInfo p {
-      margin: 20px 0; }
+      margin: 10px 0; }
     #content .showInfo h2 {
       text-align: center;
       margin: 20px auto 0 auto; }
@@ -927,4 +966,51 @@ a:hover {
       text-align: center;
       margin: 10px auto 20px auto; }
     #content .showInfo img {
-      margin: 20px auto; }
+      margin: 10px auto; }
+
+#map {
+  max-width: 71.11111em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 20px; }
+  #map::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.singleTitle {
+  margin-top: 40px; }
+
+#about h2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #about h2:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 37.5em) {
+    #about h2 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      #about h2:last-child {
+        margin-right: 0; } }
+
+#about p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  #about p:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 37.5em) {
+    #about p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      #about p:last-child {
+        margin-right: 0; } }

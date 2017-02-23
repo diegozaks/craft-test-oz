@@ -56,29 +56,27 @@
 			<a href="{{ entry.url }}">
 				<h2>{{ entry.title }}</h2>
 			</a>
-			<h3>{{ entry.showCompanyName }}
+			<h3 class="locale">{{ entry.showCompanyName }}</h3>
+			<h3>
         	{% if craft.locale == 'he' %}
-				<span id="dateRange"> | {{ entry.showDateStart | date('j/m ')  }} - {{ entry.showDateEnd | date('j/m')  }}</span>
+				<span id="dateRange">{{ entry.showDateStart | date('j/m ')  }} - {{ entry.showDateEnd | date('j/m')  }}</span>
 			{% else %}
-				<span id="dateRange"> | {{ entry.showDateStart | date('M j')  }} - {{ entry.showDateEnd | date('M j')  }}</span>
+				<span id="dateRange">{{ entry.showDateStart | date('M j')  }} - {{ entry.showDateEnd | date('M j')  }}</span>
 			{% endif %}
 			</h3>
-			{# <ul>
-				{% for block in entry.showTicketInformation %}
-					<li>
-					    {% if block.type == "ticketInformation" %}
-								<h3 id="theater">{{ block.theaterName }}</h3>
-					    {% endif %}
-					</li>
-				{% endfor %}
-			</ul> #}
+			<a href="{{ entry.url }}" class="ticketButton">
+				{{ "Find Tickets" | translate }}
+			</a>
 		</div>
 
 		<div class="right">
 			{% set image = entry.showThumbnail.first() %}
 			{% if image %}
-				<img src="/{{ image.url }}" alt="">
+			<div class="showThumb" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+			{% else %}
+			<div class="showThumb">
 			{% endif %}
+			</div>
 		
 			<p>{{ entry.showSummary }}</p>
 			<a href="{{ entry.url }}">Learn More</a>

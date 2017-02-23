@@ -21,79 +21,34 @@ a:hover {
 	text-decoration: none;
 }
 
+.ticketButton {
+	display: inline-block;
+	padding: 15px;
+	margin: $basic-margin*2 0 0 0;
+	width: 180px;
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: $small-font-size;
+	text-align: center;;
+	letter-spacing: 3.1px;
+	transition: color 0.1s linear;
+	transition: background 0.3s linear;
 
-// HOMEPAGE
-#featuredBG {
-	@include outer-container;
-	min-height: 400px;
-	display: flex;
-	align-items: center;
-	justify-items: space-between;
-
-	a { 
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-
-		h1, h3 {
-			color: #fff;
-		}
-
-		#dateRange {
-			margin-top: $basic-margin;
-			color: #ccc;
-		}
+	&:hover {
+		text-decoration: none;
+		background: #bbb;
 	}
 
-}
-
-#showList {
-	margin: $basic-margin*3 0;
-	h2 {
-		margin-bottom: $basic-margin;
-		margin-right: $basic-margin;
-	}
-
-	.show {
-		@include span-columns(12);
-		
-		margin: $basic-margin 0;
-
-		.left {
-			
-			h2 {
-				margin-bottom: 0;
-				margin-right: 0;
-			}
-
-			@include media($medium-screen) {
-				@include span-columns(4);
-			}
-
-			ul {
-				list-style-type: none;
-				padding: 0;
-				li {
-					margin: 0;
-				}
-			}
-		}
-		.right {
-			margin-top: $basic-margin;
-			@include media($medium-screen) {
-				@include span-columns(8);
-				margin-top: 0;
-			}
-		}
+	&:active,
+	&:focus {
+		color: $link-hover-color;
 	}
 }
 
 
-
-
-// SECONDARY HEADER
-
-#secondaryHeader {
+// HEADER
+header {
 	@include outer-container;
 	background: #000;
 
@@ -105,12 +60,12 @@ a:hover {
 	
 	a {
 		color: #fff;
-	} 
-	a:hover {
-		font-weight: bolder;
-	}
-	a:visited {
-		color: #fff;
+		&:hover {
+			font-weight: bolder;
+		}
+		&:visited {
+			color: #fff;
+		}
 	}
 
 	#nav {
@@ -131,11 +86,24 @@ a:hover {
 
 		ul {
 			list-style-type: none;
+			margin: 0 $basic-margin;
 
 			li {
 				display: inline-block;
+				text-align: center;
+				a {
+					display:inline-block;
+					font-size: $small-font-size;
+					text-transform: uppercase;
+					transition: font-weight 0.1s linear;
+					text-align: center;
+
+					&:hover {
+						font-weight: 700;
+						color: #fff;
+					}
+				}
 				@include media($medium-screen) {
-					min-width: 100px;
 					padding: 0 15px;
 
 				}
@@ -143,6 +111,93 @@ a:hover {
 		}
 	}
 
+}
+
+// HOMEPAGE
+#featuredBG {
+	@include outer-container;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-items: space-between;
+
+	a { 
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -$basic-margin;
+		text-align: center;
+
+		h1, h3 {
+			color: #fff;
+		}
+
+		#dateRange {
+			margin-top: $basic-margin;
+			color: #ccc;
+		}
+	}
+
+}
+
+#showList {
+	margin: $basic-margin*3 0;
+	h2 {
+		margin-bottom: $basic-margin;
+		// margin-right: $basic-margin;
+	}
+
+	.show {
+		@include span-columns(12);
+		margin: $basic-margin 0;
+
+		.left {
+
+			h2 {
+				margin-bottom: 0;
+				margin-right: 0;
+				font-size: 30px;
+			}
+
+			.locale {
+				font-weight: 700;
+				margin-top: 10px;
+				margin-bottom: 5px;
+			}
+
+			@include media($medium-screen) {
+				@include span-columns(4);
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				li {
+					margin: 0;
+				}
+			}
+		}
+		.right {
+
+			margin-top: $basic-margin;
+
+			.showThumb {
+				min-height: 320px;
+				margin: $basic-margin 0;
+				
+			}
+			// Reduce amrgin for button on representation.
+			.ticketButton {
+				margin-top: $basic-margin;
+			}
+
+			@include media($medium-screen) {
+				@include span-columns(8);
+				margin-top: 0;
+			}
+
+			
+		}
+	}
 }
 
 
@@ -222,13 +277,13 @@ a:hover {
 
 	    }
 		iframe {
-			margin: $basic-margin auto;
+			margin: $basic-margin/2 auto;
 			 @include media($medium-screen) {
 				min-height: 400px;
 	    	}
 		}
 	    p {
-			margin: $basic-margin 0;
+			margin: $basic-margin/2 0;
 		}
 		h2 {
 			text-align: center;
@@ -239,8 +294,40 @@ a:hover {
 			margin: $basic-margin/2 auto $basic-margin auto;
 		}
 		img {
-			margin: $basic-margin auto;
+			margin: $basic-margin/2 auto;
 		}
 	}
 
+}
+
+//  OTHER PAGES
+#map {
+	@include outer-container;
+	height: 400px;
+	width: 100%;
+	margin-bottom: $basic-margin;
+}
+.singleTitle {
+	margin-top: $basic-margin*2;
+}
+
+#about {
+	
+	h2 {
+		@include span-columns(12);
+	    @include media($medium-screen) {
+	        @include span-columns(8);
+	        // @include shift(4);
+
+	    }
+	}
+
+	p {
+		@include span-columns(12);
+	    @include media($medium-screen) {
+	        @include span-columns(8);
+	        // @include shift(4);
+
+	    }
+	}
 }
