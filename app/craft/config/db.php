@@ -26,4 +26,16 @@ return array(
     'database'  => 'craft',
   ),
 
+  '.co' => array(
+    'server'    => 'internal-db.s127312.gridserver.com',
+    'tablePrefix' => '',
+
+    // Live DB credentials:
+    'user'      => 'db127312_CRAFT',
+    'password'  => 'oMCZRrvRDPx7KBkCpBkgH+A*',
+    'database'  => 'db127312_OZ_CRAFT',
+  ),
+
 );
+
+

@@ -6,19 +6,21 @@
 {% extends "_layout" %}
 {% set title = entry.title %}
 
-{% block head %}
+  {% block head %}
   {% include "show/_showHeader.twig" %}
+  {% endblock %}
+
+{% block featuredShow %}
+{# Replace with whatever header we want for representation #}
 {% endblock %}
 
 {% block content %}
 		
 <article>
-	<header>
-		<section id="showTitle">
-			<h1>{{ entry.title }}</h1>
-			<h3>{{ entry.showCompanyName }}</h3>
-		</section>
-	</header>
+	<section id="showTitle">
+		<h1>{{ entry.title }}</h1>
+		<h3>{{ entry.showCompanyName }}</h3>
+	</section>
 	<section id="content">
 		<div class="showInfo">
 			{% for block in entry.showMarketing %}

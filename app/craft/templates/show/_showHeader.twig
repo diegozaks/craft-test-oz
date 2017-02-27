@@ -11,22 +11,29 @@
 
 {% set image = entry.showHomepageFeaturedImage.first() %}
 {% if image %}
-<div id="secondaryHeader" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+<header style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/{{ image.url }}) no-repeat center center; background-size: cover;">
 {% else %}
-<div id="secondaryHeader">
+<header>
 {% endif %}
 	
 	<div id="nav">
 		
 		{% for image in craft.assets.title('Oz Logo') %}
-		    <a href="" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+		    <a href="/" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+		{% endfor %}
+		
+		{% for entry in craft.entries.section('navigation') %}
+			<ul> 
+				{% for block in entry.navigationLink %}
+					<li>
+					{% if block.type == "navLink" %}
+				         <a href="{{ block.linkUrl }}">{{ block.linkTitle }}</a>
+				    {% endif %}
+				    </li> 
+				{% endfor %}
+			</ul>
 		{% endfor %}
 
-
-		{% include "_nav.twig" %}
 	</div>
-	
-	
-
-</div>
+</header>
 

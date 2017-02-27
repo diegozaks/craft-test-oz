@@ -23,7 +23,7 @@
 {% for entry in craft.entries.section('shows').showFeaturedOnHomepage(1).limit(1) %}
 	{% set image = entry.showHomepageFeaturedImage.first() %}
 	{% if image %}
-		<div id="featuredBG" style="background:url(/{{ image.url }}) no-repeat center center; background-size: cover;">
+		<div id="featuredBG" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/{{ image.url }}) no-repeat center center; background-size: cover;">
 	{% else %}
 		<div id="featuredBG">
 	{% endif %}
@@ -64,7 +64,7 @@
 				<span id="dateRange">{{ entry.showDateStart | date('M j')  }} - {{ entry.showDateEnd | date('M j')  }}</span>
 			{% endif %}
 			</h3>
-			<a href="{{ entry.url }}" class="ticketButton">
+			<a href="{{ entry.url }}" class="ticketButton largeOnly">
 				{{ "Find Tickets" | translate }}
 			</a>
 		</div>
@@ -79,7 +79,10 @@
 			</div>
 		
 			<p>{{ entry.showSummary }}</p>
-			<a href="{{ entry.url }}">Learn More</a>
+			<a href="{{ entry.url }}" class="learnMore largeOnly">Learn More</a>
+			<a href="{{ entry.url }}" class="ticketButton mobileOnly">
+				{{ "Find Tickets" | translate }}
+			</a>
 		</div>
 		
     </article>

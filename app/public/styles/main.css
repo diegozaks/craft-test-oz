@@ -416,13 +416,13 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #3a3ccc;
+  color: #000;
   transition: color 0.1s linear; }
   a:hover {
-    color: #7778dc;
+    color: #262626;
     text-decoration: none; }
   a:active, a:focus {
-    color: #7778dc; }
+    color: #262626; }
 
 hr {
   border: none;
@@ -496,8 +496,8 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select[multiple=multiple]:focus {
-    border-color: #3a3ccc;
-    box-shadow: 0 0 5px rgba(49, 51, 188, 0.7); }
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
 
 textarea {
   resize: vertical; }
@@ -633,12 +633,12 @@ input[type="submit"],
   button.btn-primary,
   input[type="submit"].btn-primary,
   .btn.btn-primary {
-    background-color: #3a3ccc;
+    background-color: #000;
     color: white; }
     button.btn-primary:hover,
     input[type="submit"].btn-primary:hover,
     .btn.btn-primary:hover {
-      background-color: #7778dc; }
+      background-color: #262626; }
 
 .pagination {
   clear: both;
@@ -712,7 +712,19 @@ a {
   color: #000; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
+
+.largeOnly {
+  display: none !important; }
+  @media screen and (min-width: 37.5em) {
+    .largeOnly {
+      display: inline-block !important; } }
+
+.mobileOnly {
+  display: inline-block !important; }
+  @media screen and (min-width: 37.5em) {
+    .mobileOnly {
+      display: none !important; } }
 
 .ticketButton {
   display: inline-block;
@@ -726,12 +738,12 @@ a:hover {
   text-align: center;
   letter-spacing: 3.1px;
   transition: color 0.1s linear;
-  transition: background 0.3s linear; }
+  transition: background 0.1s linear; }
   .ticketButton:hover {
     text-decoration: none;
     background: #bbb; }
   .ticketButton:active, .ticketButton:focus {
-    color: #7778dc; }
+    color: #262626; }
 
 header {
   max-width: 71.11111em;

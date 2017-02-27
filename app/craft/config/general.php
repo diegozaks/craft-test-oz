@@ -36,4 +36,15 @@ return array(
     ),
   ),
 
+  '.co' => array(
+    'devMode' => true,
+    // In dev mode we always want to see the latest changes to a template:
+    'enableTemplateCaching' => false,
+
+    'siteUrl'  => array(
+      'en_us' => 'http://dev.oz-productions.co/',
+      'he' => 'http://dev.oz-productions.co/he/',
+    ),
+  ),
+
 );
