@@ -143,6 +143,10 @@ header {
 		margin-top: -$basic-margin;
 		text-align: center;
 
+		&:hover {
+			text-decoration: none;
+		}
+
 		h1, h3 {
 			color: #fff;
 		}

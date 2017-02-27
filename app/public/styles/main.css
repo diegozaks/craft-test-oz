@@ -821,6 +821,8 @@ header {
     margin-right: auto;
     margin-top: -20px;
     text-align: center; }
+    #featuredBG a:hover {
+      text-decoration: none; }
     #featuredBG a h1, #featuredBG a h3 {
       color: #fff; }
     #featuredBG a #dateRange {
