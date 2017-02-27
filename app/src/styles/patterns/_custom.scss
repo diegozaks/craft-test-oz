@@ -237,6 +237,9 @@ header {
 	h3 {
 		margin: 0;
 	}
+	a {
+		margin-top: $basic-margin 
+	}
 
 }
 
@@ -246,6 +249,7 @@ header {
 	.tickets {
 		@include span-columns(12);
 		padding-top: 40px;
+		padding-bottom: 100px;
 
 		@include media($medium-screen) {
 	         @include span-columns(4);
@@ -294,6 +298,7 @@ header {
 	    }
 		iframe {
 			margin: $basic-margin/2 auto;
+			min-height: 300px;
 			 @include media($medium-screen) {
 				min-height: 400px;
 	    	}
@@ -315,6 +320,7 @@ header {
 	}
 
 }
+
 
 //  OTHER PAGES
 #map {

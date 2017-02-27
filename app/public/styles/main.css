@@ -900,6 +900,8 @@ header {
       margin-top: 20px; } }
   #showTitle h3 {
     margin: 0; }
+  #showTitle a {
+    margin-top: 20px; }
 
 #content {
   max-width: 71.11111em;
@@ -914,7 +916,8 @@ header {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-bottom: 100px; }
     #content .tickets:last-child {
       margin-right: 0; }
     @media screen and (min-width: 37.5em) {
@@ -965,7 +968,8 @@ header {
         #content .showInfo:last-child {
           margin-right: 0; } }
     #content .showInfo iframe {
-      margin: 10px auto; }
+      margin: 10px auto;
+      min-height: 300px; }
       @media screen and (min-width: 37.5em) {
         #content .showInfo iframe {
           min-height: 400px; } }

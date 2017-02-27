@@ -20,6 +20,9 @@
 	<section id="showTitle">
 		<h1>{{ entry.title }}</h1>
 		<h3>{{ entry.showCompanyName }}</h3>
+		<a href="#tickets" class="ticketButton mobileOnly">
+				{{ "Find Tickets" | translate }}
+			</a>
 	</section>
 	<section id="content">
 		<div class="showInfo">
@@ -48,7 +51,7 @@
 			{% endfor %}
 		</div>
 		
-		<div class="tickets">
+		<div class="tickets" id="tickets">
 			<h2>{{ "Tickets" | translate }}</h2>
 			<ul>
 				{% for block in entry.showTicketInformation %}
