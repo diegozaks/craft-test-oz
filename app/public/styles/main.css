@@ -800,6 +800,10 @@ header {
         @media screen and (min-width: 37.5em) {
           header #nav ul li {
             padding: 0 15px; } }
+    header #nav.darkNav a {
+      color: #000; }
+      header #nav.darkNav a:hover {
+        color: #2d2d2d; }
 
 #featuredBG {
   max-width: 71.11111em;
@@ -833,6 +837,9 @@ header {
       width: 180px;
       background: #2d2d2d;
       color: #fff; }
+      #featuredBG a .ticketButton:hover {
+        text-decoration: none;
+        background: #bbb; }
 
 #showList {
   margin: 60px 0; }

@@ -18,22 +18,33 @@
 	
 	<div id="nav">
 		
-		{% for image in craft.assets.title('Oz Logo') %}
+		{% for image in craft.assets.title('Oz Logo White') %}
 		    <a href="/" id="logo"><img src="/{{ image.getUrl() }}" alt="{{ image.title }}"></a>
 		{% endfor %}
-		
-		{% for entry in craft.entries.section('navigation') %}
 			<ul> 
-				{% for block in entry.navigationLink %}
-					<li>
-					{% if block.type == "navLink" %}
-				         <a href="{{ block.linkUrl }}">{{ block.linkTitle }}</a>
-				    {% endif %}
-				    </li> 
+				{% for entry in craft.entries.section('navigation') %}
+					{% for block in entry.navigationLink %}
+						<li>
+						{% if block.type == "navLink" %}
+					         <a href="{{ block.linkUrl }}">{{ block.linkTitle }}</a>
+					    {% endif %}
+					    </li> 
+					{% endfor %}
 				{% endfor %}
-			</ul>
-		{% endfor %}
+			
 
+
+				{% if craft.locale == 'he' %}
+					<li>
+						<a href="{{ ll('en_us') }}">English</a>
+					</li>
+				{% endif %}
+				{% if craft.locale == 'en_us' %}
+					<li>
+						<a href="{{ ll('he') }}">עִברִית</a>
+					</li>
+				{% endif %}
+			</ul>
 	</div>
 </header>
 
