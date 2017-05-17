@@ -749,19 +749,19 @@ header {
   max-width: 71.11111em;
   margin-left: auto;
   margin-right: auto;
-  background: #000; }
+  background: #fff; }
   header::after {
     clear: both;
     content: "";
     display: block; }
   header #logo img {
-    height: 50px; }
+    height: 60px; }
   header a {
-    color: #fff; }
+    color: #000; }
     header a:hover {
       font-weight: bolder; }
     header a:visited {
-      color: #fff; }
+      color: #ccc; }
   header #nav {
     float: left;
     display: block;
@@ -826,6 +826,13 @@ header {
     #featuredBG a #dateRange {
       margin-top: 20px;
       color: #ccc; }
+    #featuredBG a .ticketButton {
+      display: inline-block;
+      padding: 15px;
+      margin: 20px 0 0 0;
+      width: 180px;
+      background: #2d2d2d;
+      color: #fff; }
 
 #showList {
   margin: 60px 0; }
