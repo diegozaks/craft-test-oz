@@ -20,7 +20,7 @@
 {% extends "_layout" %}
 
 {% block featuredShow %}
-{% for entry in craft.entries.section('shows').showFeaturedOnHomepage(1).limit(1) %}
+{% for entry in craft.entries.section('shows').showFeaturedOnHomepage(1).order('showDateEnd').limit(1) %}
 	{% set image = entry.showHomepageFeaturedImage.first() %}
 	{% if image %}
 		<div id="featuredBG" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/{{ image.url }}) no-repeat center center; background-size: cover;">
@@ -49,7 +49,7 @@
 	<h2>
 		{{ "Upcoming Shows" | translate }}
 	</h2>
-	{% for entry in craft.entries.section('shows') if entry.showDateEnd > now %}
+	{% for entry in craft.entries.section('shows').order('showDateEnd') if entry.showDateEnd > now %}
 
 	<article class="show">
 		<div class="left">
