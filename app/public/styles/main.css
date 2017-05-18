@@ -749,11 +749,43 @@ header {
   max-width: 71.11111em;
   margin-left: auto;
   margin-right: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   background: #fff; }
   header::after {
     clear: both;
     content: "";
     display: block; }
+  header #nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
+    header #nav:last-child {
+      margin-right: 0; }
+  header #featuredBG {
+    max-width: 71.11111em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0 120px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-grid-column-align: space-between;
+        justify-items: space-between; }
+    header #featuredBG::after {
+      clear: both;
+      content: "";
+      display: block; }
   header #logo img {
     height: 60px; }
   header a {
@@ -762,82 +794,51 @@ header {
       font-weight: bolder; }
     header a:visited {
       color: #ccc; }
-  header #nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    display: -ms-flexbox;
-    display: flex; }
-    header #nav:last-child {
-      margin-right: 0; }
+  header #nav #logo {
+    padding: 30px 30px; }
     @media screen and (min-width: 37.5em) {
-      header #nav {
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-align: center;
-            align-items: center; } }
-    header #nav #logo {
-      padding: 30px 30px; }
-      @media screen and (min-width: 37.5em) {
-        header #nav #logo {
-          padding: 30px 40px; } }
-    header #nav ul {
-      list-style-type: none;
-      margin: 0 20px; }
-      header #nav ul li {
+      header #nav #logo {
+        padding: 30px 40px; } }
+  header #nav ul {
+    list-style-type: none;
+    margin: 0 20px; }
+    header #nav ul li {
+      display: inline-block;
+      text-align: center; }
+      header #nav ul li a {
         display: inline-block;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        transition: font-weight 0.1s linear;
         text-align: center; }
-        header #nav ul li a {
-          display: inline-block;
-          font-size: 0.75em;
-          text-transform: uppercase;
-          transition: font-weight 0.1s linear;
-          text-align: center; }
-          header #nav ul li a:hover {
-            font-weight: 700;
-            color: #fff; }
-        @media screen and (min-width: 37.5em) {
-          header #nav ul li {
-            padding: 0 15px; } }
-    header #nav.darkNav a {
-      color: #000; }
-      header #nav.darkNav a:hover {
-        color: #2d2d2d; }
-
-#featuredBG {
-  max-width: 71.11111em;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 400px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-grid-column-align: space-between;
-      justify-items: space-between; }
-  #featuredBG::after {
-    clear: both;
-    content: "";
-    display: block; }
-  #featuredBG a {
+        header #nav ul li a:hover {
+          font-weight: 700;
+          color: #fff; }
+      @media screen and (min-width: 37.5em) {
+        header #nav ul li {
+          padding: 0 15px; } }
+  header #nav.darkNav a {
+    color: #000; }
+    header #nav.darkNav a:hover {
+      color: #2d2d2d; }
+  header #featuredBG a {
     margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
     text-align: center; }
-    #featuredBG a h1, #featuredBG a h3 {
+    header #featuredBG a h1, header #featuredBG a h3 {
       color: #fff; }
-    #featuredBG a #dateRange {
+    header #featuredBG a #dateRange {
       margin-top: 20px;
       color: #ccc; }
-    #featuredBG a .ticketButton {
+    header #featuredBG a .ticketButton {
       display: inline-block;
       padding: 15px;
       margin: 20px 0 0 0;
       width: 180px;
       background: #2d2d2d;
       color: #fff; }
-      #featuredBG a .ticketButton:hover {
+      header #featuredBG a .ticketButton:hover {
         text-decoration: none;
         background: #bbb; }
 

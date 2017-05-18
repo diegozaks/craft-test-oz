@@ -66,7 +66,27 @@ a:hover {
 // HEADER
 header {
 	@include outer-container;
+	display: flex;
+	flex-direction: column;
+
+	#nav {
+		@include span-columns(12);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+
+	#featuredBG {
+		@include outer-container;
+		padding: 50px 0 120px 0;
+		display: flex;
+		align-items: center;
+		justify-items: space-between;
+	}
+
 	background: #fff;
+
 
 	#logo {
 		img {
@@ -85,13 +105,6 @@ header {
 	}
 
 	#nav {
-		@include span-columns(12);
-		display: flex;
-
-		@include media($medium-screen) {
-			justify-content: space-between;
-			align-items: center;
-		}
 		
 		#logo {
 			padding: 30px 30px;
@@ -135,46 +148,44 @@ header {
 		}
 	}
 
-}
+	// HOMEPAGE
+	#featuredBG {
 
-// HOMEPAGE
-#featuredBG {
-	@include outer-container;
-	min-height: 400px;
-	display: flex;
-	align-items: center;
-	justify-items: space-between;
 
-	a { 
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: -$basic-margin;
-		text-align: center;
+		a { 
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: -$basic-margin;
+			text-align: center;
 
-		h1, h3 {
-			color: #fff;
-		}
-
-		#dateRange {
-			margin-top: $basic-margin;
-			color: #ccc;
-		}
-		.ticketButton {
-			display: inline-block;
-			padding: 15px;
-			margin: $basic-margin 0 0 0;
-			width: 180px;
-			background: #2d2d2d;
-			color: #fff;
-			&:hover {
-				text-decoration: none;
-				background: #bbb;
+			h1, h3 {
+				color: #fff;
 			}
-		}
-	} 
 
+			#dateRange {
+				margin-top: $basic-margin;
+				color: #ccc;
+			}
+			.ticketButton {
+				display: inline-block;
+				padding: 15px;
+				margin: $basic-margin 0 0 0;
+				width: 180px;
+				background: #2d2d2d;
+				color: #fff;
+				&:hover {
+					text-decoration: none;
+					background: #bbb;
+				}
+			}
+		} 
+
+
+	}
 
 }
+
+
 
 #showList {
 	margin: $basic-margin*3 0;

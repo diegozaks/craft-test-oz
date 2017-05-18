@@ -20,7 +20,7 @@
 {% extends "_layout" %}
 
 
-{% block featuredShow %}
+{# {% block featuredShow %}
 	{% for entry in craft.entries.section('shows').showFeaturedOnHomepage(1).order('showDateEnd').limit(1) %}
 		{% set image = entry.showHomepageFeaturedImage.first() %}
 		{% if image %}
@@ -46,7 +46,7 @@
 			</div>
 
 	{% endfor %}
-{% endblock %}
+{% endblock %} #}
 
 {% block content %}
 
