@@ -7,6 +7,7 @@ return array(
     "Representation" => "יִצוּג",
     "Find Tickets" => "כרטיסים",
     "Website" => "אתר החברה",
+    "Learn More" => "למד עוד",
 );
 
 ?>

@@ -42,8 +42,8 @@ return array(
     'enableTemplateCaching' => false,
 
     'siteUrl'  => array(
-      'en_us' => 'http://dev.oz-productions.co/',
-      'he' => 'http://dev.oz-productions.co/he/',
+      'en_us' => 'http://oz-productions.co/',
+      'he' => 'http://oz-productions.co/he/',
     ),
   ),
 
