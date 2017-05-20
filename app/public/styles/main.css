@@ -807,13 +807,19 @@ header {
       text-align: center; }
       header #nav ul li a {
         display: inline-block;
-        font-size: 0.75em;
+        padding: 5px 15px;
+        margin: 40px 0 0 0;
+        background: #2d2d2d;
+        color: #fff;
         text-transform: uppercase;
-        transition: font-weight 0.1s linear;
-        text-align: center; }
+        font-size: 0.75em;
+        text-align: center;
+        letter-spacing: 0px;
+        transition: color 0.1s linear;
+        transition: background 0.1s linear; }
         header #nav ul li a:hover {
-          font-weight: 700;
-          color: #fff; }
+          text-decoration: none;
+          background: #bbb; }
       @media screen and (min-width: 37.5em) {
         header #nav ul li {
           padding: 0 15px; } }
